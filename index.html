@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio Link - Tai Nguyen</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', sans-serif;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #2d3436;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            max-width: 400px;
+            backdrop-filter: blur(10px);
+            animation: fadeIn 0.6s ease;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .profile-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: block;
+            border: 3px solid #fff;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.05);
+        }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: #2d3436;
+        }
+
+        .role {
+            font-size: 16px;
+            color: #636e72;
+            margin-bottom: 20px;
+            font-weight: 500;
+        }
+
+        .bio {
+            font-size: 15px;
+            line-height: 1.6;
+            color: #636e72;
+            margin-bottom: 25px;
+            padding: 0 10px;
+        }
+
+        .bio-links {
+            display: grid;
+            gap: 12px;
+        }
+
+        .bio-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: #fff;
+            color: #2d3436;
+            text-decoration: none;
+            padding: 12px 20px;
+            border-radius: 12px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            border: 1px solid #eee;
+        }
+
+        .bio-links a i {
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .bio-links a:hover {
+            background: #0984e3;
+            color: #fff;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(9, 132, 227, 0.2);
+        }
+
+        .bio-links .instagram:hover {
+            background: #e4405f;
+        }
+
+        .bio-links .facebook:hover {
+            background: #1877f2;
+        }
+
+        .bio-links .github:hover {
+            background: #333;
+        }
+
+        .bio-links .portfolio:hover {
+            background: #0984e3;
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-top: 25px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+
+        .social-icons a {
+            color: #636e72;
+            text-decoration: none;
+            font-size: 24px;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            background: #f8f9fa;
+        }
+
+        .social-icons a:hover {
+            color: #fff;
+            transform: translateY(-3px);
+        }
+
+        .social-icons .email:hover {
+            background: #ea4335;
+        }
+
+        .social-icons .phone:hover {
+            background: #2ecc71;
+        }
+
+        .social-icons .linkedin:hover {
+            background: #0077b5;
+        }
+
+        @media (max-width: 480px) {
+            .container {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 24px;
+            }
+
+            .profile-img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .bio-links a {
+                padding: 10px 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <img src="https://scontent.fhan20-1.fna.fbcdn.net/v/t1.15752-9/474614648_634601289069034_7716962436469115142_n.jpg?_nc_cat=102&ccb=1-7&_nc_sid=9f807c&_nc_ohc=0Ualhy2eStYQ7kNvgGvDVYw&_nc_oc=AdghWe03blc8jV_pLyR3sdQBLZBP3pT9MyrAFPN-uDnOwC-ehw0T88g1QmcjhE5nqNk&_nc_zt=23&_nc_ht=scontent.fhan20-1.fna&oh=03_Q7cD1gGiTLSXDqSiEjMAWFzcr_V5enldBVb6SXdJEJbXSGfcDQ&oe=67CBD7B6" alt="Tai Nguyen" class="profile-img">
+        
+        <h1>Tai Nguyen</h1>
+        <div class="role">PTIT's student & Backend Development</div>
+
+        <div class="bio-links">
+            <a href="https://www.instagram.com/tai.n03" target="_blank" class="instagram">
+                <i class="fab fa-instagram"></i>
+                Instagram
+            </a>
+            <a href="https://www.facebook.com/tai.n103" target="_blank" class="facebook">
+                <i class="fab fa-facebook"></i>
+                Facebook
+            </a>
+            <a href="https://github.com/tain03" target="_blank" class="github">
+                <i class="fab fa-github"></i>
+                GitHub
+            </a>
+            <a href="#" target="_blank" class="portfolio">
+                <i class="fas fa-briefcase"></i>
+                Portfolio
+            </a>
+        </div>
+
+        <div class="social-icons">
+            <a href="mailto:ductai01102003@gmail.com" class="email">
+                <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:+84961102003" class="phone">
+                <i class="fas fa-phone"></i>
+            </a>
+            <a href="#" target="_blank" class="linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</body>
+</html>
