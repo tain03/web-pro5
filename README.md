@@ -12,7 +12,7 @@ A modern, responsive personal website showcasing my skills and professional info
 
 [View Live Website](https://web-pro5.vercel.app) • [Report Bug](mailto:ductai01102003@gmail.com) • [Request Feature](mailto:ductai01102003@gmail.com)
 
-[![Website Preview](https://i.imgur.com/a/rR5D6cF)](https://web-pro5.vercel.app)
+[![Website Preview](assets/preview_web.png)](https://web-pro5.vercel.app)
 
 </div>
 
