@@ -497,6 +497,46 @@ h1 {
     object-fit: contain;
 }
 
+.mongodb-icon {
+    filter: brightness(0) saturate(100%) invert(73%) sepia(40%) saturate(7414%) hue-rotate(101deg) brightness(92%) contrast(101%);
+}
+
+.spring-icon {
+    /* Spring's green color is already in the SVG */
+    width: 30px;
+    height: 30px;
+}
+
+.mysql-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.oracle-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.python-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.git-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.aws-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.google-cloud-icon {
+    width: 30px;
+    height: 30px;
+}
+
 .skill-item span {
     font-size: 12px;
     font-weight: 500;
@@ -509,6 +549,11 @@ h1 {
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     background: var(--primary-color);
     animation: pulse-light 1.5s infinite;
+}
+
+/* Override the default hover background for MongoDB */
+.skill-category:nth-child(3) .skill-item:nth-child(2):hover {
+    background: #00ED64 !important;
 }
 
 .skill-item:hover i,
@@ -533,7 +578,7 @@ h1 {
 
 /* Database */
 .skill-category:nth-child(3) .skill-item:nth-child(1) i { color: #4479A1; } /* MySQL */
-.skill-category:nth-child(3) .skill-item:nth-child(2) i { color: #47A248; } /* MongoDB */
+.skill-category:nth-child(3) .skill-item:nth-child(2) i { color: #00ED64; } /* MongoDB */
 .skill-category:nth-child(3) .skill-item:nth-child(3) i { color: #F80000; } /* Oracle */
 
 /* Deployment & Cloud */
@@ -549,7 +594,9 @@ h1 {
 /* Backend hover */
 .skill-category:nth-child(1) .skill-item:nth-child(1):hover { background: #007396; } /* Java */
 .skill-category:nth-child(1) .skill-item:nth-child(2):hover { background: #6DB33F; } /* Spring */
+.skill-category:nth-child(1) .skill-item:nth-child(2):hover .spring-icon { filter: brightness(0) invert(1); }
 .skill-category:nth-child(1) .skill-item:nth-child(3):hover { background: #3776AB; } /* Python */
+.skill-category:nth-child(1) .skill-item:nth-child(3):hover .python-icon { filter: brightness(0) invert(1); }
 
 /* Frontend hover */
 .skill-category:nth-child(2) .skill-item:nth-child(1):hover { background: #E34F26; } /* HTML5 */
@@ -560,14 +607,20 @@ h1 {
 
 /* Database hover */
 .skill-category:nth-child(3) .skill-item:nth-child(1):hover { background: #4479A1; } /* MySQL */
-.skill-category:nth-child(3) .skill-item:nth-child(2):hover { background: #47A248; } /* MongoDB */
+.skill-category:nth-child(3) .skill-item:nth-child(1):hover .mysql-icon { filter: brightness(0) invert(1); }
+.skill-category:nth-child(3) .skill-item:nth-child(2):hover { background: #00ED64; } /* MongoDB */
+.skill-category:nth-child(3) .skill-item:nth-child(2):hover .mongodb-icon { filter: brightness(0) invert(1); }
 .skill-category:nth-child(3) .skill-item:nth-child(3):hover { background: #F80000; } /* Oracle */
+.skill-category:nth-child(3) .skill-item:nth-child(3):hover .oracle-icon { filter: brightness(0) invert(1); }
 
 /* Deployment & Cloud hover */
 .skill-category:nth-child(4) .skill-item:nth-child(1):hover { background: #FF9900; } /* AWS */
+.skill-category:nth-child(4) .skill-item:nth-child(1):hover .aws-icon { filter: brightness(0) invert(1); }
 .skill-category:nth-child(4) .skill-item:nth-child(2):hover { background: #4285F4; } /* Google Cloud */
+.skill-category:nth-child(4) .skill-item:nth-child(2):hover .google-cloud-icon { filter: brightness(0) invert(1); }
 .skill-category:nth-child(4) .skill-item:nth-child(3):hover { background: #2496ED; } /* Docker */
 .skill-category:nth-child(4) .skill-item:nth-child(4):hover { background: #F05032; } /* Git */
+.skill-category:nth-child(4) .skill-item:nth-child(4):hover .git-icon { filter: brightness(0) invert(1); }
 
 /* Profile Image Frame */
 .profile-img {
