@@ -57,4 +57,66 @@ $(document).ready(function() {
         // Page is fully loaded
         console.log('Page loaded');
     });
+
+    // Modal functionality
+    const portfolioModal = document.getElementById('portfolioModal');
+    const linkedinModal = document.getElementById('linkedinModal');
+    const portfolioLink = document.getElementById('portfolioLink');
+    const linkedinLink = document.getElementById('linkedinLink');
+    const modalCloseButtons = document.querySelectorAll('.modal-close');
+
+    // Function to open a modal
+    function openModal(modal) {
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden'; // Prevent scrolling
+    }
+
+    // Function to close a modal
+    function closeModal(modal) {
+        modal.classList.remove('active');
+        document.body.style.overflow = ''; // Re-enable scrolling
+    }
+
+    // Function to close all modals
+    function closeAllModals() {
+        const modals = document.querySelectorAll('.modal-overlay');
+        modals.forEach(modal => {
+            closeModal(modal);
+        });
+    }
+
+    // Open portfolio modal when portfolio link is clicked
+    portfolioLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(portfolioModal);
+    });
+
+    // Open LinkedIn modal when LinkedIn link is clicked
+    linkedinLink.addEventListener('click', function(e) {
+        e.preventDefault();
+        openModal(linkedinModal);
+    });
+
+    // Close modal when close buttons are clicked
+    modalCloseButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            closeAllModals();
+        });
+    });
+
+    // Close modal when clicking outside the modal content
+    document.querySelectorAll('.modal-overlay').forEach(modal => {
+        modal.addEventListener('click', function(e) {
+            if (e.target === modal) {
+                closeModal(modal);
+            }
+        });
+    });
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(e) {
+        if (e.key === 'Escape') {
+            closeAllModals();
+        }
+    });
 });
