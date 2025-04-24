@@ -3,12 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tài Nguyễn</title>
+    <meta name="description" content="Tai Nguyen - Software Developer specializing in backend development">
+    <title>Tài Nguyễn | Developer</title>
+
+    <!-- Preload critical resources -->
+    <link rel="preload" href="assets/taind.webp" as="image" fetchpriority="high">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
     <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>👨‍💻</text></svg>">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
     <div class="theme-toggle">
         <input type="checkbox" id="darkmode-toggle">
         <label for="darkmode-toggle">
@@ -17,17 +24,17 @@
         </label>
     </div>
     <div class="container">
-        <img src="assets/taind.jpg" alt="Tai Nguyen" class="profile-img">
+        <img src="assets/taind.webp" alt="Tai Nguyen" class="profile-img" data-aos="fade-down" data-aos-duration="800" loading="eager" width="140" height="140">
 
-        <h1>Tai Nguyen</h1>
-        <div class="role">PTIT's student & Backend Development</div>
+        <h1 data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">Tai Nguyen</h1>
+        <div class="role" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">PTIT's student & Backend Development</div>
 
-        <p class="bio">Passionate about coding and building innovative solutions. Currently studying at PTIT and focusing on backend development.</p>
+        <p class="bio" data-aos="fade-up" data-aos-duration="800" data-aos-delay="400">Passionate about coding and building innovative solutions. Currently studying at PTIT and focusing on backend development.</p>
 
-        <div class="skills-container">
+        <div class="skills-container" data-aos="fade-up" data-aos-duration="800" data-aos-delay="500">
             <h3>Skills</h3>
 
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="600">
                 <h4>Backend</h4>
                 <div class="skills-grid">
                     <div class="skill-item" title="Java">
@@ -45,7 +52,7 @@
                 </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="700">
                 <h4>Frontend</h4>
                 <div class="skills-grid">
                     <div class="skill-item" title="HTML5">
@@ -71,7 +78,7 @@
                 </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="800">
                 <h4>Database</h4>
                 <div class="skills-grid">
                     <div class="skill-item" title="MySQL">
@@ -89,7 +96,7 @@
                 </div>
             </div>
 
-            <div class="skill-category">
+            <div class="skill-category" data-aos="fade-up" data-aos-duration="800" data-aos-delay="900">
                 <h4>Deployment & Cloud</h4>
                 <div class="skills-grid">
                     <div class="skill-item" title="AWS">
@@ -112,7 +119,7 @@
             </div>
         </div>
 
-        <div class="bio-links">
+        <div class="bio-links" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1000">
             <a href="https://www.instagram.com/tai.n103" target="_blank" class="instagram">
                 <i class="fab fa-instagram"></i>
                 Instagram
@@ -131,7 +138,7 @@
             </a>
         </div>
 
-        <div class="social-icons">
+        <div class="social-icons" data-aos="fade-up" data-aos-duration="800" data-aos-delay="1100">
             <a href="mailto:ductai01102003@gmail.com" class="email">
                 <i class="fas fa-envelope"></i>
             </a>
@@ -143,6 +150,9 @@
             </a>
         </div>
     </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script src="script.js"></script>
 </body>
 </html>

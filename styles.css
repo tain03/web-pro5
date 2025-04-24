@@ -44,6 +44,12 @@ body {
     padding: 20px;
     position: relative;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+/* Smooth scrolling for the entire page */
+html {
+    scroll-behavior: smooth;
 }
 
 body::before {
@@ -66,11 +72,15 @@ body::before {
     width: 100%;
     max-width: 420px;
     backdrop-filter: blur(10px);
-    animation: fadeIn 0.8s ease;
+    animation: fadeIn 0.5s ease;
     position: relative;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    opacity: 1;
+    transform: translateY(0);
 }
+
+
 
 .container::before {
     content: '';
@@ -127,6 +137,23 @@ body::before {
     0% { transform: scale(1); opacity: 0.7; }
     50% { transform: scale(1.05); opacity: 0.3; }
     100% { transform: scale(1); opacity: 0.7; }
+}
+
+@keyframes pulse-light {
+    0% { box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); }
+    50% { box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25); }
+    100% { box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15); }
+}
+
+@keyframes float {
+    0% { transform: translateY(-5px) scale(1.02); }
+    50% { transform: translateY(-8px) scale(1.02); }
+    100% { transform: translateY(-5px) scale(1.02); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(-8px) rotate(8deg) scale(1.1); }
+    to { transform: translateY(-12px) rotate(8deg) scale(1.15); }
 }
 
 h1 {
@@ -218,9 +245,10 @@ h1 {
 
 .bio-links a:hover {
     color: #fff;
-    transform: translateY(-3px);
-    box-shadow: 0 7px 20px rgba(0, 0, 0, 0.15);
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
     border-color: transparent;
+    animation: float 3s ease-in-out infinite;
 }
 
 .bio-links a:hover::before {
@@ -297,7 +325,8 @@ h1 {
 
 .social-icons a:hover {
     color: #fff;
-    transform: translateY(-5px) rotate(5deg);
+    transform: translateY(-8px) rotate(8deg) scale(1.1);
+    animation: bounce 1s infinite alternate;
 }
 
 .social-icons a:hover::before {
@@ -443,9 +472,12 @@ h1 {
     background: rgba(255, 255, 255, 0.7);
     border-radius: 12px;
     padding: 15px 10px;
-    transition: var(--transition);
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
     cursor: pointer;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    will-change: transform;
 }
 
 .dark-theme .skill-item {
@@ -473,9 +505,10 @@ h1 {
 }
 
 .skill-item:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    transform: translateY(-8px) scale(1.05);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
     background: var(--primary-color);
+    animation: pulse-light 1.5s infinite;
 }
 
 .skill-item:hover i,
