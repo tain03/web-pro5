@@ -70,12 +70,13 @@ This is a clean, interactive personal website built with HTML, CSS, and JavaScri
 ## 📁 Project Structure
 
 ```
-📦 personal-website
+📦 web-pro5
  ┣ 📜 index.html              # Main HTML file
  ┣ 📜 styles.css              # CSS styles
  ┣ 📜 script.js               # JavaScript functionality
  ┣ 📂 assets                  # Assets directory
  ┃ ┣ 🖼️ taind.webp           # Profile image
+ ┃ ┣ 🖼️ preview_web.png      # Website preview image
  ┃ ┣ 🖼️ mongodb-icon.svg     # MongoDB icon
  ┃ ┣ 🖼️ spring-icon.svg      # Spring icon
  ┃ ┣ 🖼️ python-icon.svg      # Python icon
